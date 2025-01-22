@@ -2,7 +2,6 @@ import MaskedView from "@react-native-masked-view/masked-view";
 import { LinearGradient } from "expo-linear-gradient";
 import { StyleSheet, View } from "react-native";
 import Animated, { cubicBezier } from "react-native-reanimated";
-import { shimmer } from "react-native-css-animations";
 
 const startFactory = (x: number, y: number, rotate: number, scale: number) => ({
   "60%": {
@@ -25,8 +24,24 @@ export default function App() {
           style={styles.mask}
           maskElement={<Animated.Text style={styles.label}>Reanimated</Animated.Text>}
         >
-          {/* Shimmer animation ⬇️ */}
-          <Animated.View style={[styles.gradientContainer, shimmer, { animationDuration: "3s" }]}>
+          <Animated.View
+            style={[
+              styles.gradientContainer,
+              {
+                animationName: {
+                  from: {
+                    transform: [{ translateX: "-25%" }],
+                  },
+                  to: {
+                    transform: [{ translateX: "25%" }],
+                  },
+                },
+                animationDuration: "3s",
+                animationIterationCount: "infinite",
+                animationTimingFunction: "linear",
+              },
+            ]}
+          >
             <LinearGradient
               colors={["#422006", "#facc15", "#422006"]}
               locations={[0.46, 0.5, 0.54]}
@@ -133,7 +148,6 @@ const styles = StyleSheet.create({
   },
   label: {
     color: "#422006",
-    fontFamily: "Poppins",
     fontSize: 42,
     fontWeight: "bold",
   },
