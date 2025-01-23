@@ -24,7 +24,6 @@
     "expo-constants": "~17.0.4",
     "expo-font": "~13.0.3",
     "expo-haptics": "~14.0.1",
-    "expo-linear-gradient": "^14.0.2",
     "expo-linking": "~7.0.4",
     "expo-router": "~4.0.17",
     "expo-splash-screen": "~0.29.21",
