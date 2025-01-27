@@ -2,7 +2,7 @@
 
 https://github.com/user-attachments/assets/1bc672c9-a891-4195-91c9-7924683491c8
 
-A simple shimmer animation with disappearing stars implemented using `@react-native-masked-view/masked-view`, `expo-linear-gradient` and `react-native-reanimated` v4 CSS Animations feature.
+A simple shimmer animation with disappearing stars implemented using `@react-native-masked-view/masked-view`, `linear-gradient()` and `react-native-reanimated` v4 CSS Animations feature.
 
 ## How to run the project
 
