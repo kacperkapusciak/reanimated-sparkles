@@ -1,5 +1,4 @@
 import MaskedView from "@react-native-masked-view/masked-view";
-import { LinearGradient } from "expo-linear-gradient";
 import { StyleSheet, View } from "react-native";
 import Animated, { cubicBezier } from "react-native-reanimated";
 
@@ -26,7 +25,7 @@ export default function App() {
         >
           <Animated.View
             style={[
-              styles.gradientContainer,
+              styles.gradient,
               {
                 animationName: {
                   from: {
@@ -41,15 +40,7 @@ export default function App() {
                 animationTimingFunction: "linear",
               },
             ]}
-          >
-            <LinearGradient
-              colors={["#422006", "#facc15", "#422006"]}
-              locations={[0.46, 0.5, 0.54]}
-              start={{ x: 0, y: -3 }}
-              end={{ x: 1, y: 3 }}
-              style={styles.gradient}
-            />
-          </Animated.View>
+          />
         </MaskedView>
       </View>
       <View style={styles.starWrapper}>
@@ -137,14 +128,12 @@ const styles = StyleSheet.create({
     height: 60,
     width: 235,
   },
-  gradientContainer: {
+  gradient: {
     flex: 1,
     width: "300%",
     marginHorizontal: "-100%",
-  },
-  gradient: {
-    flex: 1,
-    width: "100%",
+    [process.env.EXPO_OS === "web" ? "backgroundImage" : "experimental_backgroundImage"]:
+      "linear-gradient(100deg, #422006 46%, #facc15 50%, #422006 54%)",
   },
   label: {
     color: "#422006",
