@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     width: "300%",
     marginHorizontal: "-100%",
     [process.env.EXPO_OS === "web" ? "backgroundImage" : "experimental_backgroundImage"]:
-      "linear-gradient(90deg, #422006 46%, #facc15 50%, #422006 54%)",
+      "linear-gradient(100deg, #422006 46%, #facc15 50%, #422006 54%)",
   },
   label: {
     color: "#422006",
