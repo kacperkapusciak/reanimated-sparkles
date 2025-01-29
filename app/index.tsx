@@ -68,7 +68,7 @@ export default function App() {
               animationDuration: "2.8s",
               animationFillMode: "forwards",
               animationName: startFactory(-8, -8, 10, 1.2),
-              animationTimingFunction: "easeIn",
+              animationTimingFunction: "ease-in",
               animationIterationCount: "infinite",
             },
           ]}
@@ -84,7 +84,7 @@ export default function App() {
               animationDuration: "2.4s",
               animationFillMode: "forwards",
               animationName: startFactory(5, 8, 30, 0.8),
-              animationTimingFunction: "easeIn",
+              animationTimingFunction: "ease-in",
               animationIterationCount: "infinite",
             },
           ]}
@@ -99,7 +99,7 @@ export default function App() {
               animationDuration: "2.2s",
               animationFillMode: "forwards",
               animationName: startFactory(10, -5, 40, 1.3),
-              animationTimingFunction: "easeIn",
+              animationTimingFunction: "ease-in",
               animationIterationCount: "infinite",
             },
           ]}
